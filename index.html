@@ -19,9 +19,10 @@
                     <img src="images/logo_sid.png" alt="">
                 </a>
                 <a href="index.html">Home</a>
-                <a href="#">Projects</a>
-                <a href="#">About</a>
-                <a href="#">Contact</a>
+                <a href="#services">Services</a>
+                <a href="#project">Projects</a>
+                <a href="#about">About</a>
+                <a href="#content">Contact</a>
                 <a href="office.sidarcchitects.com" class="btn_1">Let's talk</a>
                 <div class="menu">
                     <img src="images/hamburger.png" alt="Hamburger" class="white-image">
@@ -31,14 +32,36 @@
                 </div>
                 <div class="menu_container">
                     <a href="index.html">Home</a>
-                <a href="#">Studio</a>
-                <a href="#">Services</a>
-                <a href="#">Contact</a>
-                <a href="#">FAQ`s</a>
-                <a href="" class="btn_1">Let's talk</a>
+                    <a href="#services">Services</a>
+                    <a href="#project">Projects</a>
+                    <a href="#about">About</a>
+                    <a href="#content">Contact</a>
+                    <a href="tel:+919737545855" class="btn_1">Let's talk</a>
+
                 </div>
             </div>
         </nav>
+        <script>document.addEventListener('DOMContentLoaded', function() {
+            const links = document.querySelectorAll('.container-xl a[href^="#"]');
+        
+            links.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault(); // Prevent default anchor click behavior
+        
+                    const targetId = this.getAttribute('href'); // Get the target section ID
+                    const targetSection = document.querySelector(targetId); // Find the target section
+        
+                    // Scroll to the target section
+                    if (targetSection) {
+                        targetSection.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start' // Align to the start of the section
+                        });
+                    }
+                });
+            });
+        });
+        </script>
         <section class="intro">
             <div class="container-xl">
                 <div class="heading_1 wow animate__animated animate__fadeInUp">
@@ -63,7 +86,7 @@
                 <!-- <a href="#" class="btn_2">View Projects</a>
             </div> -->
         </section>
-        <section class="about">
+        <section  id="about" class="about">
             <div class="container-xl">
                 <div class="section_heading">
                     <div>
@@ -132,7 +155,7 @@
             </div>
         </section>
         
-        <section class="rating">
+        <section  id="services" class="rating">
             <div class="container-xl">
                 <div class="section_heading">
                     <div>
@@ -300,7 +323,7 @@
                 
             </div>
         </marquee>
-        <section class="brands">
+        <section  id="project"class="brands">
             <div class="container-xl">
                 <div class="section_heading">
                     <div>
@@ -673,7 +696,7 @@
 
         
         
-        <footer>
+        <footer  id="content">
             <div class="container-xl">
                 <div class="footer">
                     <div>
